@@ -1,5 +1,7 @@
-document.querySelector("#title").textContent = "Super Mario Jump"
+const currentLevel = "Level 01"
 
+document.querySelector("#title").textContent = "Super Mario Jump"
+document.querySelector("#level").textContent = currentLevel
 
 const mario = document.querySelector(".super-mario");
 const pipe = document.querySelector(".pipe-game");
@@ -29,6 +31,8 @@ const loopGame = setInterval(() => {
     mario.style.width = "75px";
     mario.style.marginLeft = "45px";
     document.querySelector("#title").textContent = "Game Over"
+    document.querySelector("#level").textContent = "Recorde: " + currentLevel
+
 
 
     clearInterval(loopGame)
@@ -37,6 +41,5 @@ const loopGame = setInterval(() => {
 
 }, 10);
 
-
 document.addEventListener("keydown", jump)
-document.addEventListener("touchenter", jump);
+document.addEventListener("touchstart", jump)
