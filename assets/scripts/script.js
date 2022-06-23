@@ -39,3 +39,4 @@ const loopGame = setInterval(() => {
 
 
 document.addEventListener("keydown", jump)
+document.addEventListener('touchstart', jump);
