@@ -1,3 +1,6 @@
+document.querySelector("#title").textContent = "Super Mario Jump"
+
+
 const mario = document.querySelector(".super-mario");
 const pipe = document.querySelector(".pipe-game");
 
@@ -25,6 +28,8 @@ const loopGame = setInterval(() => {
     mario.src = "./Assets/images/mario-game-over.png"
     mario.style.width = "75px";
     mario.style.marginLeft = "45px";
+    document.querySelector("#title").textContent = "Game Over"
+
 
     clearInterval(loopGame)
 
